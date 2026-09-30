@@ -1,0 +1,135 @@
+% !TeX program = lualatex
+\documentclass[paper=a4, fleqn]{jlreq}
+
+% ===== 日本語・数式 =====
+\usepackage{luatexja}
+\usepackage{amsmath,amssymb}
+\usepackage{ascmac}
+
+% ===== レイアウト =====
+\usepackage[
+	top=18mm,
+	bottom=20mm,
+	left=9mm,
+	right=9mm
+]{geometry}
+
+% ===== 図・装飾 =====
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% ===== 既存教材用 =====
+
+
+	\tcbuselibrary{skins}
+\usetikzlibrary{patterns}
+
+% ===== 各種設定 =====
+\renewcommand{\labelenumi}{(\theenumi)\ }
+\newcommand{\ctext}[1]{%
+	\raise0.2ex\hbox{\textcircled{\scriptsize #1}}%
+}
+
+\newtcolorbox{mysimplebox}[1]{%
+	colframe=black,
+	colback=white,
+	coltitle=black,
+	colbacktitle=white,
+	boxrule=0.8pt,
+	arc=0mm,
+	fonttitle=\sffamily\bfseries,
+	enhanced,
+	attach boxed title to top left={
+		xshift=3mm,
+		yshift=-4mm
+	},
+	boxed title style={frame hidden},
+	title=#1
+}
+
+\setlength{\columnseprule}{0.8pt}
+
+\begin{document}
+
+% ==================================================
+% 表紙
+% ==================================================
+
+\begin{center}
+\mbox{}\\[18mm]
+
+\huge
+{\textbf{数\qquad\quad 学}}\\[24mm]
+
+\small
+	{\textbf{〈監督者の指示があるまで開いてはいけない〉}}\\
+\end{center}
+
+\vspace{9mm}
+
+\small
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+1.\quad
+試験開始後，まず解答用紙に自分の受験番号と氏名を正しく記入しなさい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+2.\quad
+試験開始後，速やかに問題冊子に落丁や乱丁がないか確認しなさい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+\phantom{2.\;\;}
+落丁や乱丁があった場合は，手を挙げなさい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+3.\quad
+解答用紙に印刷されていない問いの番号は各自で記入しなさい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+4.\quad
+下書きは問題用紙の余白を利用しなさい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+5.\quad
+問題用紙は試験終了後，持ち帰ってもよい。\\[-2mm]
+
+\qquad\qquad\qquad\qquad\qquad\qquad
+\phantom{5.\;\;}
+ただし，試験途中には持ち出してはいけない。
+
+% ==================================================
+% 問題ページ
+% ==================================================
+
+\newpage
+\mbox{}\\[6mm]
+
+\qquad\qquad\qquad
+{\LARGE\textbf{１}}.\;
+\normalsize
+次の \fbox{\rule{0pt}{2.0ex}\rule{0.7cm}{0pt}}
+にあてはまる適切な数値を解答欄に記入せよ。\\[1.5mm]
+
+\qquad\qquad\quad\;\;
+2つの袋A，Bがあり，袋Aには赤玉2個，白玉1個が，袋Bには赤玉1個，白玉2個が入\\
+\qquad\qquad\quad\;\;
+っている。袋A，Bから玉を1個ずつ取り出し，取り出した2個の玉の色が異なるときは，そ\\
+\qquad\qquad\quad\;\;
+の2個の玉を互いに入れ替えて元の袋に戻し，同じ色であるときは，そのまま元の袋に戻すと\\
+\qquad\qquad\quad\;\;
+いう操作を繰り返し行う。このとき，\\[-1mm]
+
+\qquad\qquad\quad\;\;
+・2回目の操作を終えたとき，袋Aの中に残っている赤玉が1個である確率は
+\;\fbox{(ア)}\;,\\[-2mm]
+
+\qquad\qquad\quad\;\;
+・4回目の操作を終えたとき，袋Aの中に残っている赤玉が0個である確率は
+\;\fbox{(イ)}\;\\
+
+\qquad\qquad\quad\;\;
+である。
+\end{document}
